@@ -63,4 +63,11 @@ class AuthController extends Controller
 
         return response()->noContent();
     }
+
+    public function logoutAllSessions(Request $request)
+    {
+        $request->user()->tokens()->delete();
+
+        return response()->noContent();
+    }
 }
