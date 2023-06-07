@@ -36,7 +36,7 @@ class ProductFactory extends Factory
             'name' => $this->faker->name(),
             'description' => $this->faker->sentence($nbWords = 6, $variableNbWords = true),
             'price' => $this->faker->randomNumber(2),
-            'quantity' => $this->faker->randomNumber(1),
+            'quantity' => 1,
             'image' => $images[random_int(0, 11)]
         ];
     }
